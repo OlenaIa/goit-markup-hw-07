@@ -47,25 +47,42 @@
     --transition-duration: 250ms;
 }
 
-body {
+/* body {
     color: var(--primary-text-color);
     background-color: var(--primary-background-color);
     font-family: var(--main-text-font);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-}
+} */
 
 /* Загальні налаштування контейнера */
 
 .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline: 2px solid tomato;
+}
+
+@media screen and (min-width: 480px) {
+    .container {
+        width: 428px;
+    }
+}
+
+/* .container {
     width: 1158px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 15px;}*/
     /* outline: 2px solid tomato; */
-}
+ 
+
+
 
 /* Зкинути крапки */
 .list {
@@ -168,7 +185,7 @@ img {
 
 /* ========= Хедер ========= */
 
-.header-cntnr {
+/* .header-cntnr {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -177,11 +194,11 @@ img {
 .header-page {
     border-bottom: 1px solid var(--footer-text-color);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
+} */
 
 /* Навігація сайту */
 
-.header-nav a {
+/* .header-nav a {
     color: var(--title-text-color);
     text-decoration: none;
 }
@@ -223,11 +240,11 @@ img {
     height: 4px;
     background-color: var(--activ-hover-color);
     border-radius: 2px;
-}
+} */
 
 /* Адреса */
 
-.addrss a {
+/* .addrss a {
     color: var(--primary-text-color);
     font-style: normal;
     text-decoration: none;
@@ -249,11 +266,11 @@ img {
     display: block;
     padding-top: 24px;
     padding-bottom: 23px;
-}
+} */
 
 /* ================ Герой ====================== */
 
-.hero {
+/* .hero {
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
@@ -281,11 +298,11 @@ img {
 
 .small {
     text-transform: none;
-}
+} */
 
 /* Кнопка */
-.btn {
-    /* min-width: 169px; */
+/* .btn {
+    min-width: 169px;
     padding: 16px 32px;
     border-radius: 4px;
     border: none;
@@ -306,11 +323,11 @@ img {
 .btn:hover,
 .btn:focus {
     background-color: var(--activ-hover-color);
-}
+} */
 
 /* ================= Цінності ================= */
 
-.values {
+/* .values {
     padding-bottom: 60px;
 }
 
@@ -333,11 +350,11 @@ img {
     margin-bottom: 8px;
     background-color: var(--secondary-background-color);
 
-}
+} */
 
 /* ================== Сервіс ================== */
 
-.services {
+/* .services {
     padding-top: 60px;
 }
 
@@ -345,11 +362,11 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-}
+} */
 
 /* ================= Команда ====================== */
 
-.team {
+/* .team {
     background-color: var(--secondary-background-color);
 }
 
@@ -406,11 +423,11 @@ img {
     padding-top: 32px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
-}
+} */
 
 /* ============== customerS ===================*/
 
-.customers {
+/* .customers {
     padding-top: 130px;
 }
 
@@ -447,10 +464,10 @@ img {
 
 .customer-link:is(:hover, :focus) svg {
     fill: var(--activ-hover-color);
-}
+} */
 
 /* ==================== ФУТЕР =========== */
-.ftr {
+/* .ftr {
     padding-top: 100px;
     padding-bottom: 100px;
     color: var(--footer-text-color);
@@ -556,11 +573,11 @@ img {
     top: 50%;
     right: 24px;
     transform: translateY(-50%);
-}
+} */
 
 /* ============== Модальне вікно ============== */
 
-.backdrop {
+/*.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -761,36 +778,16 @@ background-color: var(--activ-hover-color);
     align-items: center;
     margin-bottom: 24px;
 }
-/*
- .modal-label-accept::before {
-    content: '';
-    display: block;
-    width: 16px;
-    height: 16px;
-    border: 1.25px solid var(--fill-modal-icon);
-    border-radius: 2px;
-}
 
-.modal-input-accept:checked + .modal-label-accept::before {
-background-color: var(--activ-hover-color);
-border: 1.25px solid var(--activ-hover-color);
-background-image: url(../images/click.svg);
-background-position: center;
-background-repeat: no-repeat;
-}
 
-.modal-input-accept:focus + .modal-label-accept::before {
-    outline: 1px solid var(--accent-color);
-} */
-
-.btn-submit {
+ .btn-submit {
     min-width: 169px;
     display: block;
-}
+} */
 
 /* =============== Портфоліо ===================== */
 
-.cards {
+/* .cards {
     padding-top: 96px;
     padding-bottom: 120px;
 }
@@ -883,5 +880,5 @@ background-repeat: no-repeat;
 .card-link:hover, 
 .card-link:focus  {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+} */
 
