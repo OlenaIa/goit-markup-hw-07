@@ -39,6 +39,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-btn js-open-menu">
+          <svg width="32" height="22" class="mbl-menu-icon">
+            <use href="./images/icons.svg#icon-charm_menu-hamburger"></use>
+          </svg>
+        </button>
         <address>
           <ul class="addrss list">
             <li class="addrss-item">
@@ -51,6 +56,75 @@
             </li>
           </ul>
         </address>
+      </div>
+
+      <div class="mobile-menu js-menu-container">
+        <div class="mobile-menu-container">
+          <button
+            type="button"
+            class="mobile-close-btn js-close-menu"
+            data-modal-close
+          >
+            <svg class="modal-close-svg" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-list list">
+            <li class="mobile-menu-item">
+              <a href="./index.html" class="mobile-navigation">Studio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="./Portfolio.html" class="mobile-navigation">Portfolio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="" class="mobile-navigation-contacts mobile-navigation"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-addrss-list list">
+            <li class="mobile-addrss-item">
+              <a href="tel:+110001111111" class="mobile-tel"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-addrss-item">
+              <a href="mailto:info@devstudio.com" class="mobile-email"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-net-list net-list list">
+            <li class="team-net-item net-item">
+              <a href="" class="mobile-net-link net-link">
+                <svg class="net-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-net-item net-item">
+              <a href="" class="mobile-net-link net-link">
+                <svg class="net-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-net-item net-item">
+              <a href="" class="mobile-net-link net-link">
+                <svg class="net-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-net-item net-item">
+              <a href="" class="mobile-net-link net-link">
+                <svg class="net-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -545,6 +619,7 @@
         </form>
       </div>
     </div> -->
+    <script src="./js/mobile-menu.js"></script>
     <!-- <script src="./js/modal.js"></script> -->
   </body>
 </html>
