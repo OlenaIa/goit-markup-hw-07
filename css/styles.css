@@ -57,7 +57,7 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* Загальні налаштування контейнера */
+/* General properties container */
 
 .container {
     padding-left: 16px;
@@ -113,7 +113,7 @@ img {
     display: block;
 }
 
-/* hidden elements */
+/* Hidden elements */
 
 .visually-hidden {
     position: absolute;
@@ -128,7 +128,7 @@ img {
     overflow: hidden;
 }
 
-/* general properties Sections */
+/* General properties Sections */
 
 .section {
     padding-top: 96px;
@@ -142,7 +142,7 @@ img {
 }
 }
 
-/*  general properties TITLE */
+/*  General properties TITLE */
 
  .ttl {
     color: var(--title-text-color);
@@ -186,15 +186,6 @@ img {
     border-radius: 50%;
 }
 
-/* Логотип */
-
-/* .ftr-logo {
-    display: inline-block;
-    margin-bottom: 16px;
-    line-height: 1.17;
-    color: var(--logo-footer-second-part);
-} */
-
 /* ============== HEADER =============== */
 
 .header-page {
@@ -215,6 +206,7 @@ img {
 
 .logo {
     font-family: var(--logo-text-font);
+    font-weight: 800;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
@@ -710,20 +702,17 @@ address {
     }
 }
 
-/* ============== customerS ===================*/
-
-/* .customers {
-    padding-top: 130px;
-}
+/* ============== CUSTOMERS ===================*/
 
 .customer-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    column-gap: 16px;
+    row-gap: 72px;
 }
 
 .customer-item {
-    flex-basis: calc((100% - 5*24px) / 6);
+    flex-basis: calc((100% - 1*16px) / 2);
     height: 88px;
 }
 
@@ -749,31 +738,43 @@ address {
 
 .customer-link:is(:hover, :focus) svg {
     fill: var(--activ-hover-color);
-} */
+}
 
-/* ==================== ФУТЕР =========== */
-/* .ftr {
-    padding-top: 100px;
-    padding-bottom: 100px;
+/* +++++++++++ Tablet ++++++++++++ */
+
+@media screen and (min-width: 768px) {
+    .customer-list {
+        column-gap: 24px;
+    }
+
+    .customer-item {
+        flex-basis: calc((100% - 2*24px) / 3);
+        height: 88px;
+    }
+}
+
+/* +++++++++++ Desktop ++++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .customer-item {
+        flex-basis: calc((100% - 5*24px) / 6);
+        height: 88px;
+    }
+}
+
+/* ==================== FOOTER =========== */
+
+.ftr {
+    padding-top: 96px;
+    padding-bottom: 96px;
     color: var(--footer-text-color);
     background-color: var(--hero-footer-background-color);
 }
 
-.ftr-cntnr {
-    display: flex;
-    align-items: baseline;
-}
-
-.ftr-motto {
-    margin-right: 120px;
-}
-
-.ftr-motto p {
-    max-width: 264px;
-}
-
-.net-container {
-    margin-right: 80px;
+.ftr-logo {
+    display: block;
+    margin-bottom: 16px;
+    color: var(--logo-footer-second-part);
 }
 
 .txt-ttl-ftr {
@@ -783,6 +784,7 @@ address {
 }
 
 .ftr-net-list {
+    justify-content: center;
     gap: 16px;
 }
 
@@ -796,6 +798,66 @@ address {
 .ftr-net-link:focus {
     background-color: var(--footer-bg-hover-icon);
 }
+
+/* +++++++++++ Only Phone ++++++++++++ */
+
+@media screen and (max-width: 767px) {
+    .ftr {        
+    text-align: center;
+    }
+
+    .ftr-motto {
+        margin-bottom: 72px;
+    }
+}
+/* +++++++++++ Tablet ++++++++++++ */
+
+@media screen and (min-width: 768px) {
+    .ftr-cntnr {
+        display: flex;
+    }
+
+    .ftr-motto {
+        margin-right: 24px;
+    }
+}
+
+/* +++++++++++ Desktop ++++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .ftr {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .ftr-motto {
+        margin-right: 120px;
+    }
+}
+
+/* 
+
+.ftr-cntnr {
+    align-items: baseline;
+}
+
+.ftr-logo {
+    line-height: 1.17;
+}
+
+
+
+.ftr-motto p {
+    max-width: 264px;
+}
+
+.net-container {
+    margin-right: 80px;
+}
+
+
+
+
 
 .subscribe-form {
     display: flex;
