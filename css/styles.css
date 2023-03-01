@@ -113,19 +113,7 @@ img {
     display: block;
 }
 
-/* Загальні падінги у секцій */
-
-/* .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-} */
-
-/*  Заголовки */
-
- .ttl {
-    color: var(--title-text-color);
-    text-transform: capitalize;
-}
+/* hidden elements */
 
 .visually-hidden {
     position: absolute;
@@ -134,20 +122,35 @@ img {
     margin: -1px;
     border: 0;
     padding: 0;
-
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-    }
+}
 
-/* .values-title,
-.name.ttl,
-.card-ttl {
+/* general properties Sections */
+
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media screen and (min-width: 1200px) {
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+}
+
+/*  general properties TITLE */
+
+ .ttl {
+    color: var(--title-text-color);
+    text-transform: capitalize;
+}
+
+.values-title {
     margin-bottom: 8px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
 }
 
 .services-title,
@@ -158,8 +161,30 @@ img {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
-    
-} */
+}
+
+.name.ttl,
+.card-ttl {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+ /*  General properties Networks */
+
+.net-list {
+    display: flex;
+}
+
+.net-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
 
 /* Логотип */
 
@@ -320,21 +345,8 @@ address {
     color: var(--primary-text-color);
 }
 
-.net-list {
-    display: flex;
-}
-
 .mobile-net-list {
     gap: 56px;
-}
-
-.net-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
 }
 
 .mobile-net-link {
@@ -515,59 +527,120 @@ address {
     background-color: var(--activ-hover-color);
 } */
 
-/* ================= Цінності ================= */
+/* ================= VALUES ================= */
 
-/* .values {
-    padding-bottom: 60px;
+/* +++++++++++ Only Phone and Tablet ++++++++++++ */
+
+@media screen and (max-width: 1199px) {
+    .values-icon {
+        display: none;
+    }
+
+    .values-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+    }
+
+    .values-list p {
+        font-weight: 500;
+    }
 }
 
-.values-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
+/* +++++++++++ Only Phone ++++++++++++ */
+
+@media screen and (max-width: 767px) {
+    .values-item:not(:last-child) {
+        margin-bottom: 72px;
+    }
+
+    .values-title {
+        text-align: center;
+    }
 }
 
-.values-list li {
-    flex-basis: calc((100% - 3*24px) / 4);
+/* +++++++++++ Tablet ++++++++++++ */
+
+@media screen and (min-width: 768px) {
+    .values-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 72px;
+        column-gap: 24px;
+    }
+
+    .values-item {
+        flex-basis: calc((100% - 1*24px) / 2);
+    }
 }
 
-.values-icon {
-    display: flex;
-    width: 264px;
-    height: 112px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
+/* +++++++++++ Desktop ++++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .values {
+        padding-bottom: 60px;
+    }
+
+    .values-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .values-list {
+        row-gap: 24px;
+    }
+
+    .values-item {
+        flex-basis: calc((100% - 3*24px) / 4);
+    }
+
+    .values-icon {
+        display: flex;
+        width: 264px;
+        height: 112px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+        background-color: var(--secondary-background-color);
+
+    }
+}
+
+/* ================== SERVICES ================== */
+
+/* +++++++++++ Only Phone and Tablet ++++++++++++ */
+
+@media screen and (max-width: 1199px) {
+    .services {
+        display: none;
+   } 
+}
+
+/* +++++++++++ Desktop ++++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .services {
+        padding-top: 60px;
+    }
+
+    .services-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+}
+
+/* ================= TEAM ====================== */
+
+ .team {
     background-color: var(--secondary-background-color);
-
-} */
-
-/* ================== Сервіс ================== */
-
-/* .services {
-    padding-top: 60px;
 }
 
-.services-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-} */
-
-/* ================= Команда ====================== */
-
-/* .team {
-    background-color: var(--secondary-background-color);
-}
-
-.team-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-}
-
-.team-item {
-    flex-basis: calc((100% - 3*24px) / 4);
+.team-container {
+    width: 296px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .name.ttl,
@@ -579,22 +652,9 @@ address {
     margin-bottom: 8px;
 }
 
-.net-list {
-    display: flex;
-    justify-content: center;
-}
-
 .team-net-list {
-    gap: 24px;
-}
-
-.net-link {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    gap: 24px;
 }
 
 .team-net-link {
@@ -613,7 +673,42 @@ address {
     padding-top: 32px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
-} */
+}
+
+/* +++++++++++ Tablet ++++++++++++ */
+
+@media screen and (min-width: 768px) {
+    .team-container {
+        width: 584px;
+    }
+
+    .team-list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 64px;
+    }
+
+    .team-item {
+        flex-basis: calc((100% - 1*24px) / 2);
+    }
+}
+
+/* +++++++++++ Desktop ++++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .team-container {
+        width: 1158px;
+    }
+
+    .team-list {
+        row-gap: 24px;
+    }
+
+    .team-item {
+        flex-basis: calc((100% - 3*24px) / 4);
+    }
+}
 
 /* ============== customerS ===================*/
 
