@@ -462,12 +462,105 @@ address {
 
 /* ================ HERO ====================== */
 
+.hero {
+    padding-top: 112px;
+    text-align: center;
+    color: var(--hero-text-color);
+    max-width: 1440px;
+    min-height: 600px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #434455;
+}
 
+.hero-title {
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: capitalize;
+}
+
+.btn {
+    border-radius: 4px;
+    border: none;
+    color: var(--hero-text-color);
+    background-color: var(--button-background-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) cubic-bezier(var(--cubic));
+}
+
+.btn-hero {
+    min-width: 169px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--activ-hover-color);
+}
+
+/* +++++++++++ Only Phone ++++++++++++ */
+
+@media screen and (max-width: 767px) {
+    .hero {
+        padding-bottom: 112px;
+    }
+
+    .hero-title {
+        max-width: 320px;
+        margin-bottom: 72px;
+        font-size: 36px;
+        line-height: 1.11;
+    }
+
+}
+
+/* +++++++++++ Tablet ++++++++++++ */
+
+@media screen and (min-width: 768px) {
+    .hero {
+        padding-bottom: 108px;
+    }
+
+    .hero-title {
+        max-width: 496px;
+        margin-bottom: 40px;
+        font-size: 56px;
+        line-height: 1.07;
+    }
+
+    .small {
+        text-transform: none;
+    }
+}
+
+/* +++++++++++ Desktop ++++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+
+    .hero-title {
+        margin-bottom: 48px;
+    }
+    
+
+}
 
 /* .hero {
-    padding-top: 188px;
-    padding-bottom: 188px;
-    text-align: center;
+    
     color: var(--hero-text-color);
     max-width: 1440px;
     min-height: 600px;
@@ -479,45 +572,9 @@ address {
     background-color: #434455;
 }
 
-.hero-title {
-    max-width: 494px;
-    margin-bottom: 48px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 56px;
-    line-height: 1.07;
-    text-transform: capitalize;
-    text-align: center;
-}
+ */
 
-.small {
-    text-transform: none;
-} */
 
-/* Кнопка */
-/* .btn {
-    min-width: 169px;
-    padding: 16px 32px;
-    border-radius: 4px;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-
-    color: var(--hero-text-color);
-    background-color: var(--button-background-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    font-family: inherit;
-    font-weight: 500;
-    font-size: inherit;
-    line-height: inherit;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    transition: background-color var(--transition-duration) cubic-bezier(var(--cubic));
-}
-.btn:hover,
-.btn:focus {
-    background-color: var(--activ-hover-color);
-} */
 
 /* ================= VALUES ================= */
 
@@ -777,6 +834,10 @@ address {
     color: var(--logo-footer-second-part);
 }
 
+.ftr-motto p {
+    max-width: 264px;
+}
+
 .txt-ttl-ftr {
     margin-bottom: 16px;
     font-weight: 500;
@@ -797,71 +858,6 @@ address {
 .ftr-net-link:hover,
 .ftr-net-link:focus {
     background-color: var(--footer-bg-hover-icon);
-}
-
-/* +++++++++++ Only Phone ++++++++++++ */
-
-@media screen and (max-width: 767px) {
-    .ftr {        
-    text-align: center;
-    }
-
-    .ftr-motto {
-        margin-bottom: 72px;
-    }
-}
-/* +++++++++++ Tablet ++++++++++++ */
-
-@media screen and (min-width: 768px) {
-    .ftr-cntnr {
-        display: flex;
-    }
-
-    .ftr-motto {
-        margin-right: 24px;
-    }
-}
-
-/* +++++++++++ Desktop ++++++++++++ */
-
-@media screen and (min-width: 1200px) {
-    .ftr {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-
-    .ftr-motto {
-        margin-right: 120px;
-    }
-}
-
-/* 
-
-.ftr-cntnr {
-    align-items: baseline;
-}
-
-.ftr-logo {
-    line-height: 1.17;
-}
-
-
-
-.ftr-motto p {
-    max-width: 264px;
-}
-
-.net-container {
-    margin-right: 80px;
-}
-
-
-
-
-
-.subscribe-form {
-    display: flex;
-    gap: 24px;
 }
 
 .wrapper-ftr-input {
@@ -885,7 +881,7 @@ address {
 }
 
 .ftr-input {
-    width: 264px;
+    width: 100%;
     height: 40px;
     padding: 8px 16px;
 
@@ -893,7 +889,7 @@ address {
     line-height: 2;
     letter-spacing: 0.04em;
     color: var(--footer-second-text);
-    
+
     background-color: transparent;
     border: 1px solid var(--ftr-border-input);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -920,7 +916,80 @@ address {
     top: 50%;
     right: 24px;
     transform: translateY(-50%);
-} */
+}
+
+/* +++++++++++ Only Phone ++++++++++++ */
+
+@media screen and (max-width: 767px) {
+    .ftr {        
+        text-align: center;
+    }
+
+    .ftr-motto {
+        margin-bottom: 72px;
+    }
+
+    .net-container {
+        margin-bottom: 72px;
+    }
+
+    .ftr-motto p {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ftr-input {
+        margin-bottom: 16px;
+    }
+
+    .subscribe-label {
+        top: calc(50% - 8px);
+    }
+}
+/* +++++++++++ Tablet ++++++++++++ */
+
+@media screen and (min-width: 768px) {
+    .ftr-cntnr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ftr-motto {
+        margin-right: 24px;
+        margin-bottom: 72px;
+    }
+
+    .net-container {
+        margin-right: auto;
+    }
+
+    .subscribe-form {
+        display: flex;
+        gap: 24px;
+    }
+
+    .ftr-input {
+        width: 264px;
+    }
+}
+
+/* +++++++++++ Desktop ++++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .ftr {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .ftr-motto {
+        margin-right: 120px;
+    }
+
+    .net-container {
+        margin-right: 80px;
+    }
+}
 
 /* ============== Модальне вікно ============== */
 
