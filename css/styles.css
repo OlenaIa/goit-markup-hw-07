@@ -218,6 +218,8 @@ img {
     color: var(--accent-color);
 }
 
+/* +++++++++++ Only Phone ++++++++++++ */
+
 @media screen and (max-width: 767px) {
 .header-menu,
 address {
@@ -346,6 +348,18 @@ address {
 }
 }
 
+/* +++++++++++ Only small Phone ++++++++++++ */
+
+@media screen and (min-width: 280px) and (max-width: 400px) {
+    .mobile-tel {
+        font-size: 24px;
+    }
+
+.mobile-net-list {
+    gap: 28px;
+}
+}
+
 /* +++++++++++++++++ Tablet +++++++++++ */
 
 @media screen and (min-width: 768px) {
@@ -466,14 +480,23 @@ address {
     padding-top: 112px;
     text-align: center;
     color: var(--hero-text-color);
-    max-width: 1440px;
-    min-height: 600px;
+    max-width: 428px;
+    min-height: 432px;
     margin: 0 auto;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #434455;
+}
+
+@media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office-mobile@2x.jpg');
+    }
 }
 
 .hero-title {
@@ -530,6 +553,18 @@ address {
 @media screen and (min-width: 768px) {
     .hero {
         padding-bottom: 108px;
+        max-width: 768px;
+        min-height: 436px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office-tablet.jpg');
+    }
+    
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office-tablet@2x.jpg');
+        }
     }
 
     .hero-title {
@@ -550,6 +585,18 @@ address {
     .hero {
         padding-top: 188px;
         padding-bottom: 188px;
+        max-width: 1440px;
+        min-height: 600px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office-desktop.jpg');
+    }
+    
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office-desktop@2x.jpg');
+        }
     }
 
     .hero-title {
@@ -558,23 +605,6 @@ address {
     
 
 }
-
-/* .hero {
-    
-    color: var(--hero-text-color);
-    max-width: 1440px;
-    min-height: 600px;
-    margin: 0 auto;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7) ), url('../images/people-office.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #434455;
-}
-
- */
-
-
 
 /* ================= VALUES ================= */
 
@@ -991,9 +1021,9 @@ address {
     }
 }
 
-/* ============== Модальне вікно ============== */
+/* ============== MODAL WINDOW ============== */
 
-/*.backdrop {
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -1016,12 +1046,10 @@ address {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 408px;
-    min-height: 576px;
-
-    padding: 72px 24px 24px;
+    width: 392px;
+    min-height: 586px;
+    padding: 72px 16px 24px;
     background-color: var(--modal-background-color);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transform: translate(-50%, -50%);
 }
@@ -1041,12 +1069,11 @@ address {
     border-radius: 50%;
     cursor: pointer;
     transition: background-color var(--transition-duration) cubic-bezier(var(--cubic));
-
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-background-color: var(--activ-hover-color);
+    background-color: var(--activ-hover-color);
 }
 
 .modal-close-svg {
@@ -1059,24 +1086,10 @@ background-color: var(--activ-hover-color);
 }
 
 .form-ttl {
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     font-weight: 500;
     text-align: center;
     color: var(--title-text-color);
-}
-
-.txt-mdl-lbl-first-last {
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.04em;
-}
-
-.txt-mdl-lbl-first {
-    color: var(--modal-label-txt);
-}
-
-.txt-mdl-lbl-last {
-    color: var(--modal-txt-accept);
 }
 
 .txt-mdl-lbl {
@@ -1084,6 +1097,15 @@ background-color: var(--activ-hover-color);
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--modal-label-txt);
+}
+
+.txt-mdl-lbl-first {
+    letter-spacing: 0.04em;
+}
+
+.txt-mdl-lbl-last {
+    letter-spacing: 0.04em;
+    color: var(--modal-txt-accept);
 }
 
 .modal-label {
@@ -1119,11 +1141,11 @@ background-color: var(--activ-hover-color);
     left: 16px;
     transform: translateY(-50%);
     fill: var(--fill-modal-icon);
-    
-    transition: fill var(--transition-duration) cubic-bezier(var(--cubic));
-    }
 
-.modal-input:focus + .icon-input {
+    transition: fill var(--transition-duration) cubic-bezier(var(--cubic));
+}
+
+.modal-input:focus+.icon-input {
     fill: var(--accent-color);
 }
 
@@ -1134,12 +1156,12 @@ background-color: var(--activ-hover-color);
 }
 
 .mdl-lbl-cmmnt {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .modal-textarea {
     width: 100%;
-    height: 138px;
+    height: 120px;
     resize: none;
     border-radius: 4px;
     padding: 8px 16px;
@@ -1175,31 +1197,65 @@ background-color: var(--activ-hover-color);
     opacity: 0;
 }
 
-.modal-input-accept:checked + .modal-label-accept > .icon-click-wrap {
+.modal-input-accept:checked+.modal-label-accept>.icon-click-wrap {
     background-color: var(--activ-hover-color);
     border: 1.25px solid var(--activ-hover-color);
 }
 
-.modal-input-accept:checked + .modal-label-accept .icon-click {
+.modal-input-accept:checked+.modal-label-accept .icon-click {
     opacity: 1;
 }
 
-.modal-input-accept:focus + .modal-label-accept > .icon-click-wrap {
+.modal-input-accept:focus+.modal-label-accept>.icon-click-wrap {
     outline: 1px solid var(--accent-color);
 }
 
- .modal-label-accept {
+.modal-label-accept {
     display: flex;
     gap: 8px;
     align-items: center;
     margin-bottom: 24px;
 }
 
-
- .btn-submit {
+.btn-submit {
     min-width: 169px;
     display: block;
-} */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* +++++++++++ Only small Phone ++++++++++++ */
+
+@media screen and (min-width: 280px) and (max-width: 400px) {
+    .modal {
+        max-width: 100%;
+        min-height: 100%;
+    }
+}
+
+/* +++++++++++ Tablet ++++++++++++ */
+
+@media screen and (min-width: 768px) {
+    .modal {
+        width: 408px;
+        min-height: 586px;
+        padding: 72px 24px 24px;
+    }
+}
+
+/* +++++++++++ Desktop ++++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .modal {
+        min-height: 584px;
+        }
+
+    .mdl-lbl-cmmnt {
+        margin-bottom: 16px;
+        }
+}
 
 /* =============== Портфоліо ===================== */
 
