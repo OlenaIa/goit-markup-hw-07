@@ -28,18 +28,20 @@
           >
           <ul class="header-menu list">
             <li class="menu-item">
-              <a href="./index.html" class="navigation">Studio</a>
             </li>
             <li class="menu-item">
-              <a href="./Portfolio.html" class="navigation current"
-                >Portfolio</a
-              >
+              <a href="./Portfolio.html" class="navigation current">Portfolio</a>
             </li>
             <li class="menu-item">
               <a href="" class="navigation">Contacts</a>
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-btn js-open-menu">
+          <svg width="32" height="22" class="mbl-menu-icon">
+            <use href="./images/icons.svg#icon-charm_menu-hamburger"></use>
+          </svg>
+        </button>
         <address>
           <ul class="addrss list">
             <li class="addrss-item">
@@ -52,6 +54,75 @@
             </li>
           </ul>
         </address>
+      </div>
+
+      <div class="mobile-menu js-menu-container">
+        <div class="mobile-menu-container">
+          <button
+            type="button"
+            class="mobile-close-btn js-close-menu"
+            data-modal-close
+          >
+            <svg class="modal-close-svg" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-list list">
+            <li class="mobile-menu-item">
+              <a href="./index.html" class="mobile-navigation">Studio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="./Portfolio.html" class="mobile-navigation">Portfolio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="" class="mobile-navigation mobile-navigation"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-addrss-list list">
+            <li class="mobile-addrss-item">
+              <a href="tel:+110001111111" class="mobile-tel"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-addrss-item">
+              <a href="mailto:info@devstudio.com" class="mobile-email"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-net-list net-list list">
+            <li class="team-net-item net-item">
+              <a href="" class="mobile-net-link net-link">
+                <svg class="net-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-net-item net-item">
+              <a href="" class="mobile-net-link net-link">
+                <svg class="net-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-net-item net-item">
+              <a href="" class="mobile-net-link net-link">
+                <svg class="net-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-net-item net-item">
+              <a href="" class="mobile-net-link net-link">
+                <svg class="net-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -82,6 +153,35 @@
             <li class="card-item">
               <a href="" class="card-link"
                 ><div class="wrapper-overlay">
+                  <!-- <picture>
+                    <source
+                      srcset="
+                        ./images/banking-desktop.jpg    360w,
+                        ./images/banking-desktop@2x.jpg 720w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/banking-tablet.jpg    356w,
+                        ./images/banking-tablet@2x.jpg 712w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/banking-mobile.jpg    396w,
+                        ./images/banking-mobile@2x.jpg 792w
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/banking-mobile.jpg"
+                      alt="Banking App"
+                      sizes="(min-width: 1200px) 33w, (min-width: 768px) 50w,
+                    (max-width: 767px) 100w"
+                    />
+                  </picture> -->
                   <picture>
                     <source
                       srcset="
@@ -107,8 +207,7 @@
                     <img
                       src="./images/banking-mobile.jpg"
                       alt="Banking App"
-                      width="360"
-                      height="300"
+
                     />
                   </picture>
                   <p class="overlay">
@@ -148,8 +247,7 @@
                     <img
                       src="./images/qrcode-mobile.jpg"
                       alt="QR code"
-                      width="360"
-                      height="300"
+
                   /></picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -188,8 +286,8 @@
                     <img
                       src="./images/notebook-mobile.jpg"
                       alt="Notebook"
-                      width="360"
-                      height="300"
+
+
                   /></picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -228,8 +326,7 @@
                     <img
                       src="./images/car-mobile.jpg"
                       alt="Car steering wheel"
-                      width="360"
-                      height="300"
+
                   /></picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -268,8 +365,6 @@
                     <img
                       src="./images/cellphone-mobile.jpg"
                       alt="Cellphone"
-                      width="360"
-                      height="300"
                   /></picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -305,11 +400,7 @@
                         ./images/girl-mobile@2x.jpg 2x
                       "
                       media="(max-width: 767px)" />
-                    <img
-                      src="./images/girl-mobile.jpg"
-                      alt="Girl"
-                      width="360"
-                      height="300"
+                    <img src="./images/girl-mobile.jpg" alt="Girl"
                   /></picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -348,8 +439,7 @@
                     <img
                       src="./images/persons-mobile.jpg"
                       alt="Persons"
-                      width="360"
-                      height="300"
+
                   /></picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -388,8 +478,7 @@
                     <img
                       src="./images/fruit-mobile.jpg"
                       alt="Fruit"
-                      width="360"
-                      height="300"
+
                   /></picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -428,8 +517,7 @@
                     <img
                       src="./images/coffee-mobile.jpg"
                       alt="Coffee"
-                      width="360"
-                      height="300"
+
                   /></picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -508,15 +596,16 @@
                 ><span class="txt-ftr-lbl">E-mail</span></label
               >
             </div>
-            <div class="wrapper-ftr-btn">
+            <span class="wrapper-ftr-btn">
               <button type="submit" class="btn btn-ftr">Subscribe</button>
               <svg class="icon-subscribe" width="24" height="24">
                 <use href="./images/icons.svg#icon-subscribe"></use>
               </svg>
-            </div>
+            </span>
           </form>
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

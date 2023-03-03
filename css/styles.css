@@ -62,7 +62,6 @@ body {
 .container {
     padding-left: 16px;
     padding-right: 16px;
-    outline: 2px solid tomato;
 }
 
 @media screen and (min-width: 428px) {
@@ -87,12 +86,12 @@ body {
     }
 }
 
-/* Зкинути крапки */
+/* Скинути крапки */
 .list {
     list-style: none;
 }
 
-/* Зкидання відступів */
+/* Скидання відступів */
 h1,
 h2,
 h3,
@@ -1257,21 +1256,23 @@ address {
         }
 }
 
-/* =============== Портфоліо ===================== */
+/* =============== PORTFOLIO ===================== */
 
-/* .cards {
-    padding-top: 96px;
-    padding-bottom: 120px;
+.cards {
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
 .filter-cards {
     display: flex;
-    justify-content: center;
-    margin-bottom: 72px;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 16px;
+    margin-bottom: 48px;
 }
 
 .filter-btn {
-    padding: 12px 24px;
+    padding: 8px 16px;
     border: 1px solid var(--footer-text-color);
     border-radius: 4px;
     color: var(--accent-color);
@@ -1282,7 +1283,7 @@ address {
     line-height: inherit;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition: color var(--transition-duration) cubic-bezier(var(--cubic)), background-color var(--transition-duration) cubic-bezier(var(--cubic)), box-shadow var(--transition-duration) cubic-bezier(var(--cubic)); 
+    transition: color var(--transition-duration) cubic-bezier(var(--cubic)), background-color var(--transition-duration) cubic-bezier(var(--cubic));
 }
 
 .filter-btn:hover,
@@ -1290,26 +1291,12 @@ address {
 .filter-btn:active {
     color: var(--hover-text-color-prtfl);
     background-color: var(--activ-hover-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.filter-item:not(:last-child) {
-    margin-right: 24px;
-}
-
-.cards-list {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
-}
-
-.card-item {
-    flex-basis: calc((100% - 2*24px) / 3);
 }
 
 .card-link {
     display: block;
+    width: 396px;
+    height: auto;
     text-decoration: none;
     color: var(--primary-text-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -1342,15 +1329,89 @@ address {
 
 .card-content {
     padding-top: 32px;
-    padding-bottom: 31px;
+    padding-bottom: 32px;
     padding-left: 16px;
     border-bottom: 1px solid var(--border-portfolio);
     border-left: 1px solid var(--border-portfolio);
     border-right: 1px solid var(--border-portfolio);
 }
 
-.card-link:hover, 
-.card-link:focus  {
+.card-link:hover,
+.card-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-} */
+}
+/* +++++++++++ Phone ++++++++++++ */
+
+@media screen and (max-width: 767px) {
+.card-item:not(:last-child) {
+    margin-bottom: 48px;
+}
+}
+
+/* +++++++++++ Only small Phone ++++++++++++ */
+
+@media screen and (max-width: 400px) {
+    .card-link {
+        width: 100%;
+    }
+}
+
+/* +++++++++++ Tablet ++++++++++++ */
+
+@media screen and (min-width: 768px) {
+    .cards {
+        padding-top: 64px;
+        padding-bottom: 96px;
+        }
+
+     .filter-cards {
+        justify-content: center;        
+        margin-bottom: 64px;
+        }
+
+.filter-btn {
+    padding: 12px 24px;
+    }
+
+    .cards-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 72px;
+        column-gap: 24px;
+    }
+
+    .card-item {
+        flex-basis: calc((100% - 1*24px) / 2);
+    }
+
+    .card-link {
+        width: 356px;
+    }
+}
+/* +++++++++++ Desktop ++++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .cards {
+        padding-top: 96px;
+        padding-bottom: 120px;
+    }
+
+     .filter-cards {
+        margin-bottom: 72px;
+        }
+
+    .cards-list {
+        row-gap: 48px;
+        column-gap: 24px;
+    }
+
+    .card-item {
+        flex-basis: calc((100% - 2*24px) / 3);
+    }
+       
+    .card-link {
+        width: 360px;
+        }
+}
+
 
